@@ -1,0 +1,9 @@
+# unwanted directories #
+########################
+.git/
+.idea/
+venv/
+
+# unwanted files #
+##################
+#.gitignore
