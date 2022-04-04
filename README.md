@@ -1,15 +1,15 @@
 # Normative modeling for psychiatry
 Normative modeling for psychiatry based on deep learning models.
 
-### VBM preprocessing:
-#### BHRCS dataset
+### 1. VBM preprocessing:
+#### 1.1. BHRCS dataset
 runai/preprocessing/submit_BHRCS_spm12_part1.sh 0
 
 runai/preprocessing/submit_BHRCS_spm12_part1.sh 1
 
 runai/preprocessing/submit_BHRCS_spm12_part2.sh
 
-#### ABCD dataset
+#### 1.2. ABCD dataset
 runai/preprocessing/submit_ABCD_spm12_part1.sh 0
 
 runai/preprocessing/submit_ABCD_spm12_part1.sh 1
