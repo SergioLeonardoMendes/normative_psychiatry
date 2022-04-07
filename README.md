@@ -4,10 +4,10 @@ Normative modeling for psychiatry based on deep learning models.
 ### 1. VBM preprocessing:
 
 #### 1.1. Generate matlab spm12 scripts
- - create a file named all_nii_files.txt containing all files to be VBM processed (file paths must be relative to the spm12 docker container).
- - copy files located in src/preprocessing/rawtovbm/ to the same directory of all_nii_files.txt.
- - run the script generate_spm12_scripts.sh.
- - the generated scripts should look like the ones in src/preprocessing/rawtovbm/abcd/ or src/preprocessing/rawtovbm/bhrcs/.  
+ - Create a file named all_nii_files.txt containing all files to be VBM processed (file paths must be relative to the spm12 docker container).
+ - Copy files located in src/preprocessing/rawtovbm/ to the same directory of all_nii_files.txt.
+ - Run the script generate_spm12_scripts.sh.
+ - The generated scripts should look like the ones in src/preprocessing/rawtovbm/abcd/ or src/preprocessing/rawtovbm/bhrcs/.  
 
 #### 1.2. BHRCS preprocessing jobs:
  ```bash
