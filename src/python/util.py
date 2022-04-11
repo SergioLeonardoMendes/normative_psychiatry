@@ -77,7 +77,7 @@ def get_data_dicts(
 
         if not only_img:
             result_dict.update(info_dict)
-          
+
         data_dicts.append(result_dict)
 
     print(f"Found {len(data_dicts)} subjects.")
