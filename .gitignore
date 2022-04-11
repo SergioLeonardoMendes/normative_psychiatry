@@ -7,3 +7,4 @@ venv/
 # unwanted files #
 ##################
 #.gitignore
+src/python/rascunho.py

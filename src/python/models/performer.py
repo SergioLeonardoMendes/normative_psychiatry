@@ -3,7 +3,7 @@ Performer implementation.
 Wrapper for the Performer implementation from https://github.com/lucidrains/performer-pytorch
 """
 from performer_pytorch import PerformerLM
-from transformer import TransformerBase
+from .transformer import TransformerBase
 
 
 class Performer(TransformerBase):
