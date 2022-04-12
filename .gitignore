@@ -4,6 +4,10 @@
 .idea/
 venv/
 
+src/python/__pycache__/
+src/python/layers/__pycache__/
+src/python/models/__pycache__/
+
 # unwanted files #
 ##################
 #.gitignore

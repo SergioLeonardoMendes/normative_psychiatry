@@ -1,40 +1,47 @@
-seed: 2
-run_dir: transformer_00000000_abcd
-training_ids: /project/data/train_participants_ABCD.tsv
-validation_ids: /project/data/valid_participants_ABCD.tsv
-input_height: 24
-input_width: 28
-input_depth: 24
+#General
+seed: 2 #random seed to set determinism
+run_dir: transformer_00000000_abcd #model location to resume
+training_ids: /project/data/train_participants_ABCD.tsv #training ids file location
+validation_ids: /project/data/valid_participants_ABCD.tsv #validation ids file location
+
+#Ordering
+input_height: 24 #height of 3d input data
+input_width: 28 #width of 3d input data
+input_depth: 24 #depth of 3d input data
 order_type: raster_scan
-transposed_1: 0
-transposed_2: 0
-transposed_3: 0
-transposed_4: 0
-transposed_5: 0
-reflected_rows: 0
-reflected_cols: 0
-reflected_depths: 0
-n_embd: 64
-n_layers: 16
-n_heads: 8
+transposed_1: 0 #transpose image before sequence serialization (axes=[1, 2, 0]): 1=True or 0=False
+transposed_2: 0 #transpose image before sequence serialization (axes=[0, 2, 1]): 1=True or 0=False
+transposed_3: 0 #transpose image before sequence serialization (axes=[1, 0, 2]): 1=True or 0=False
+transposed_4: 0 #transpose image before sequence serialization (axes=[2, 0, 1]): 1=True or 0=False
+transposed_5: 0 #transpose image before sequence serialization (axes=[2, 1, 0]): 1=True or 0=False
+reflected_rows: 0 #reflect rows before sequence serialization: : 1=True or 0=False
+reflected_cols: 0 #reflect cols before sequence serialization: : 1=True or 0=False
+reflected_depths: 0 #reflect depths before sequence serialization: : 1=True or 0=False
+
+#Model
+n_embd: 64 #embedding dimension
+n_layers: 16 #number of layers
+n_heads: 8 #number of heads
 local_attn_heads: 4
 local_window_size: 256
 ff_mult: 4
 ff_glu: 0
 rotary_position_emb: 0
 axial_position_emb: 0
-emb_dropout: 0.3
-ff_dropout: 0.3
-attn_dropout: 0.3
-latent_resolution: low
+emb_dropout: 0.3 #embeddings dropout
+ff_dropout: 0.3 #feed-forward dropout
+attn_dropout: 0.3 #attention dropout
+latent_resolution: low #latent resolution: low or high
 redrawn_freq: 3
-vqvae_uri: /project/mlruns/0/f89cb9ee1a824324b04df9f4b7a8e430/artifacts/final_model
-batch_size: 2
-lr: 0.001
-lr_decay: 0.999997
-n_epochs: 200
-eval_freq: 3
-augmentation: 0
-vbm_img: 1
-num_workers: 16
-experiment: TRANSFORMER_low_ABCD_00000000
+vqvae_uri: /project/mlruns/0/f89cb9ee1a824324b04df9f4b7a8e430/artifacts/final_model #path readable by load_model
+
+#Training
+batch_size: 2 #batch size
+lr: 0.001 #learning rate
+lr_decay: 0.999997 #learning rate decay
+n_epochs: 200 #number of epochs
+eval_freq: 3 #evaluation occurs between eval_freq number of epochs
+augmentation: 0 #use augmentation: 1=True or 0=False
+vbm_img: 1 #use vbm: 1=True or 0=False
+num_workers: 16 #number of loader workers
+experiment: TRANSFORMER_low_ABCD_00000000 #mlflow experiment name

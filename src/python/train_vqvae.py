@@ -1,4 +1,3 @@
-import argparse
 from omegaconf import OmegaConf
 from pathlib import Path
 
@@ -11,38 +10,6 @@ from tensorboardX import SummaryWriter
 from models.vqvae import VQVAE
 from training_functions import train_vqvae
 from util import get_training_data_loader, log_mlflow
-
-def parse_args():
-    parser = argparse.ArgumentParser()
-
-    parser.add_argument("--seed", type=int, default=2, help="Random seed to use.")
-    parser.add_argument("--run_dir", help="Location of model to resume.")
-    parser.add_argument("--training_ids", help="Location of file with training ids.")
-    parser.add_argument("--validation_ids", help="Location of file with validation ids.")
-    # model
-    parser.add_argument("--n_embed", default=8, type=int, help="Size of discrete latent space (K-way categorical).")
-    parser.add_argument("--embed_dim", default=64, type=int, help="Dimensionality of each latent embedding vector.")
-    parser.add_argument("--n_alpha_channels", default=2, type=int, help="Number of alpha channels in input image.")
-    parser.add_argument("--n_channels", default=128, type=int, help="Number of channels in the encoder and decoder.")
-    parser.add_argument("--n_res_channels", default=128, type=int, help="Number of channels in the residual layers.")
-    parser.add_argument("--n_res_layers", default=2, type=int, help="Number of residual blocks.")
-    parser.add_argument("--p_dropout", default=0.1, type=float, help="Number of strided convolutions")
-    parser.add_argument("--latent_resolution", default="low", type=str, help="Number of strided convolutions")
-    parser.add_argument("--vq_decay", type=float, default=0.99, help="vq_decay.")
-    parser.add_argument("--commitment_cost", default=0.25, type=float, help="Number of strided convolutions")
-    # training param
-    parser.add_argument("--batch_size", type=int, default=256, help="Training batch size.")
-    parser.add_argument("--lr", type=float, default=5e-4, help="Learning rate.")
-    parser.add_argument("--lr_decay", type=float, default=0.99999, help="Learning rate decay.")
-    parser.add_argument("--n_epochs", type=int, default=25, help="Number of epochs to train.")
-    parser.add_argument("--eval_freq", type=int, default=10, help="Number of epochs to betweeen evaluations.")
-    parser.add_argument("--vbm_img", type=int, default=1, help="Use vbm preprocessed image, 1 (True) or 0 (False).")
-    parser.add_argument("--augmentation", type=int, default=1, help="Use of augmentation, 1 (True) or 0 (False).")
-    parser.add_argument("--num_workers", type=int, default=8, help="Number of loader workers")
-    parser.add_argument("--experiment", help="Mlflow experiment name.")
-
-    args = parser.parse_args()
-    return args
 
 
 def main(args):
@@ -150,7 +117,6 @@ def main(args):
 
 
 if __name__ == "__main__":
-    # args = parse_args()
     args_cfg = OmegaConf.load("config/vqvae.yaml")
     args_cli = OmegaConf.from_cli()
     args = OmegaConf.merge(args_cfg, args_cli)

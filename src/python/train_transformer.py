@@ -1,5 +1,5 @@
 """ Train minGPT on the VQ-VAEs priors. """
-import argparse
+from omegaconf import OmegaConf
 from pathlib import Path
 
 import mlflow.pytorch
@@ -13,56 +13,6 @@ from models.img2seq_ordering import Ordering3D
 from models.performer import Performer
 from training_functions import train_performer
 from util import get_training_data_loader, log_mlflow
-
-def parse_args():
-    parser = argparse.ArgumentParser()
-
-    parser.add_argument("--seed", type=int, default=2, help="Random seed to use.")
-    parser.add_argument("--run_dir", help="Location of model to resume.")
-    parser.add_argument("--training_ids", help="Location of file with training ids.")
-    parser.add_argument("--validation_ids", help="Location of file with validation ids.")
-    # ordering
-    parser.add_argument("--input_height", default=28, type=int, help="Height of the input data.")
-    parser.add_argument("--input_width", default=28, type=int, help="Width of the input data.")
-    parser.add_argument("--input_depth", default=28, type=int, help="Depth of the input data.")
-    parser.add_argument("--order_type", type=str, help=".")
-    parser.add_argument("--transposed_1", default=0, type=int, help=".")
-    parser.add_argument("--transposed_2", default=0, type=int, help=".")
-    parser.add_argument("--transposed_3", default=0, type=int, help=".")
-    parser.add_argument("--transposed_4", default=0, type=int, help=".")
-    parser.add_argument("--transposed_5", default=0, type=int, help=".")
-    parser.add_argument("--reflected_rows", default=0, type=int, help=".")
-    parser.add_argument("--reflected_cols", default=0, type=int, help=".")
-    parser.add_argument("--reflected_depths", default=0, type=int, help=".")
-    # model
-    parser.add_argument("--n_embd", default=256, type=int, help="Embedding dimension.")
-    parser.add_argument("--n_layers", default=10, type=int, help="Number of layers.")
-    parser.add_argument("--n_heads", default=8, type=int, help=".")
-    parser.add_argument("--local_attn_heads", default=0, type=int, help=".")
-    parser.add_argument("--local_window_size", default=256, type=int, help=".")
-    parser.add_argument("--ff_mult", default=4, type=int, help=".")
-    parser.add_argument("--ff_glu", default=0, type=int, help=".")
-    parser.add_argument("--rotary_position_emb", default=1, type=int, help=".")
-    parser.add_argument("--axial_position_emb", default=0, type=int, help=".")
-    parser.add_argument("--emb_dropout", default=0.0, type=float, help="")
-    parser.add_argument("--ff_dropout", default=0.0, type=float, help="")
-    parser.add_argument("--attn_dropout", default=0.0, type=float, help="")
-    parser.add_argument("--redrawn_freq", type=int, default=1, help="")
-    parser.add_argument("--latent_resolution", default="low", type=str, help="")
-    parser.add_argument("--vqvae_uri", help="Path readable by load_model.")
-    # training param
-    parser.add_argument("--batch_size", type=int, default=256, help="Training batch size.")
-    parser.add_argument("--lr", type=float, default=5e-4, help="Learning rate.")
-    parser.add_argument("--lr_decay", type=float, default=0.99999, help="Learning rate decay.")
-    parser.add_argument("--n_epochs", type=int, default=25, help="Number of epochs to train.")
-    parser.add_argument("--eval_freq", type=int, default=10, help="Number of epochs to betweeen evaluations.")
-    parser.add_argument("--vbm_img", type=int, default=0, help="Use vbm preprocessed image, 1 (True) or 0 (False).")
-    parser.add_argument("--augmentation", type=int, default=1, help="Use of augmentation, 1 (True) or 0 (False).")
-    parser.add_argument("--num_workers", type=int, default=8, help="Number of loader workers")
-    parser.add_argument("--experiment", help="Mlflow experiment name.")
-
-    args = parser.parse_args()
-    return args
 
 
 def main(args):
@@ -200,5 +150,7 @@ def main(args):
 
 
 if __name__ == "__main__":
-    args = parse_args()
+    args_cfg = OmegaConf.load("config/transformer.yaml")
+    args_cli = OmegaConf.from_cli()
+    args = OmegaConf.merge(args_cfg, args_cli)
     main(args)
