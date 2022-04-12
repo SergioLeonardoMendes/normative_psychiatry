@@ -1,4 +1,5 @@
 import argparse
+from omegaconf import OmegaConf
 from pathlib import Path
 
 import torch
@@ -149,5 +150,8 @@ def main(args):
 
 
 if __name__ == "__main__":
-    args = parse_args()
+    # args = parse_args()
+    args_cfg = OmegaConf.load("config/vqvae.yaml")
+    args_cli = OmegaConf.from_cli()
+    args = OmegaConf.merge(args_cfg, args_cli)
     main(args)
