@@ -78,7 +78,7 @@ def main(args):
 
 
 if __name__ == "__main__":
-    args_cfg = OmegaConf.load("config/transformer.yaml")
+    args_cfg = OmegaConf.load("/project/src/python/config/transformer.yaml")
     args_cli = OmegaConf.from_cli()
     args = OmegaConf.merge(args_cfg, args_cli)
 
