@@ -1,0 +1,9 @@
+#General
+seed: 2 #random seed to set determinism
+run_dir: get_likelihood_ABCD #model location to resume
+val_list: /project/data/test_participants_ABCD.tsv #validation ids file location
+latent_resolution: low #latent space resolution (low or high)
+vqvae_uri: /project/mlruns/0/f89cb9ee1a824324b04df9f4b7a8e430/artifacts/final_model #path readable by load_model
+transformer_uri: /project/mlruns/0/a3f557dc7e12435cb0ba7a11d934176a/artifacts/final_model #path readable by load_model
+clinical_dir: /project/data/participants_ABCD.tsv #demographics and phenotypics
+vbm_img: 1 #use vbm: 1=True or 0=False
