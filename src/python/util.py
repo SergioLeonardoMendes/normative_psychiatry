@@ -19,6 +19,8 @@ def log_mlflow(
         val_loss: float,
 ):
     """Log model and performance on Mlflow system"""
+    mlflow.set_tracking_uri("file:/project/mlruns")
+    
     with start_run():
         print(f"MLFLOW URI: {mlflow.tracking.get_tracking_uri()}")
         print(f"MLFLOW ARTIFACT URI: {mlflow.get_artifact_uri()}")
