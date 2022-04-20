@@ -71,7 +71,7 @@ def main(args):
             selected_probs.cpu().numpy()
             np.save(sel_prob_path / f'selected_probs_{idx}.npy', selected_probs)
             likelihood = torch.sum(torch.log(selected_probs), dim=-1)
-            likelihood.cpu().numpy()
+            likelihood = likelihood.cpu().numpy()
             likelihood_ls.append(likelihood)
 
     np.save(run_dir / 'likelihood.npy', likelihood_ls)
