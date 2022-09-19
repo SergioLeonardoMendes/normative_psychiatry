@@ -69,7 +69,14 @@ def main(args):
             selected_probs = torch.gather(probs, 2, encoded_out.cpu().unsqueeze(2).long())
             selected_probs = selected_probs.squeeze(2)
             selected_probs.cpu().numpy()
+            # save subjects' unordered selected_probs
             np.save(sel_prob_path / f'selected_probs_{idx}.npy', selected_probs)
+            # save subjects' ordered selected_probs
+            subject_probs = np.load(sel_prob_path / f'selected_probs_{idx}.npy', allow_pickle=True)
+            subject_probs_ord = np.zeros(shape=subject_probs.shape)
+            subject_probs_ord[0, :] = subject_probs[0, transformer.ordering.revert_ordering]
+            np.save(sel_prob_path / f'ord_selected_probs_{i}.npy', subject_probs_ord)
+            # sum and save total likelihood per subject
             likelihood = torch.sum(torch.log(selected_probs), dim=-1)
             likelihood = likelihood.cpu().numpy()
             likelihood_ls.append(likelihood)
