@@ -65,3 +65,45 @@ runai/preprocessing/submit_ABIDE2_spm12_part1.sh 0
 
 runai/preprocessing/submit_ABIDE2_spm12_part2.sh
 ```
+
+### 2. Training models:
+
+#### 2.1. VQ-VAE
+```bash
+runai/training/submit_train_vqvae.sh
+```
+
+#### 2.2. Transformers
+```bash
+runai/training/submit_train_transformer_0.sh
+runai/training/submit_train_transformer_1.sh
+runai/training/submit_train_transformer_2.sh
+runai/training/submit_train_transformer_3.sh
+runai/training/submit_train_transformer_4.sh
+runai/training/submit_train_transformer_5.sh
+runai/training/submit_train_transformer_6.sh
+runai/training/submit_train_transformer_7.sh
+runai/training/submit_train_transformer_8.sh
+```
+
+### 3. Getting likelihood predictions:
+
+#### 3.1. ABCD
+```bash
+
+```
+
+#### 3.2. BHRCS
+```bash
+
+```
+
+#### 3.3. ADHD200
+```bash
+
+```
+
+#### 3.4. ABIDE-II
+```bash
+
+```
