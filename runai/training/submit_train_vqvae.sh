@@ -16,8 +16,8 @@ commitment_cost=0.25
 batch_size=12
 lr=0.0005
 lr_decay=0.9999
-n_epochs=200
-eval_freq=6
+n_epochs=50
+eval_freq=2
 augmentation=0
 vbm_img=1
 num_workers=16
@@ -34,8 +34,7 @@ runai submit \
   --project wds20 \
   --volume /nfs/home/wds20/sergio/normative_psychiatry:/project \
   --volume /nfs/home/wds20/sergio/project/data/:/data \
-  --command -- bash /project/src/bash/start_training.sh \
-    python3 /project/src/python/train_vqvae.py \
+  --command -- python3 /project/src/python/train_vqvae.py \
       seed=${seed} \
       run_dir=${run_dir} \
       training_ids=${training_ids} \
