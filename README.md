@@ -65,12 +65,12 @@ runai/preprocessing/submit_ABIDE2_spm12_part2.sh
 
 ### 2. Training models:
 
-#### 2.1. VQ-VAE
+#### 2.1. VQ-VAE job:
 ```bash
 runai/training/submit_train_vqvae.sh
 ```
 
-#### 2.2. Transformers
+#### 2.2. Transformers jobs:
 ```bash
 runai/training/submit_train_transformer_0.sh
 runai/training/submit_train_transformer_1.sh
@@ -85,7 +85,7 @@ runai/training/submit_train_transformer_8.sh
 
 ### 3. Getting likelihood predictions:
 
-#### 3.1. ABCD
+#### 3.1. ABCD jobs:
 ```bash
 runai/evaluation/submit_get_likelihood_0.sh
 runai/evaluation/submit_get_likelihood_1.sh
@@ -98,7 +98,7 @@ runai/evaluation/submit_get_likelihood_7.sh
 runai/evaluation/submit_get_likelihood_8.sh
 ```
 
-#### 3.2. BHRCS
+#### 3.2. BHRCS jobs:
 ```bash
 runai/evaluation/bhrcs_submit_get_likelihood_0.sh
 runai/evaluation/bhrcs_submit_get_likelihood_1.sh
@@ -111,7 +111,7 @@ runai/evaluation/bhrcs_submit_get_likelihood_7.sh
 runai/evaluation/bhrcs_submit_get_likelihood_8.sh
 ```
 
-#### 3.3. ADHD200
+#### 3.3. ADHD200 jobs:
 ```bash
 runai/evaluation/adhd200_submit_get_likelihood_0.sh
 runai/evaluation/adhd200_submit_get_likelihood_1.sh
@@ -124,7 +124,7 @@ runai/evaluation/adhd200_submit_get_likelihood_7.sh
 runai/evaluation/adhd200_submit_get_likelihood_8.sh
 ```
 
-#### 3.4. ABIDE-II
+#### 3.4. ABIDE-II jobs:
 ```bash
 runai/evaluation/abide2_submit_get_likelihood_0.sh
 runai/evaluation/abide2_submit_get_likelihood_1.sh
