@@ -1,0 +1,115 @@
+dataset_name: ADHD200 # can be: ABCD, BHRCS, ADHD200, ABIDE2
+random_seed: 999
+common_files:
+  local_path: /project/data/common_files/
+  nii_map_file: /project/data/common_files/brain_map_transformer.nii.gz
+  nii_atlas_file: /project/data/common_files/AAL3v1_1mm.nii.gz
+  info_atlas_file: /project/data/common_files/AAL3v1_1mm.nii.txt
+  nii_icv_mask: /project/data/common_files/mask_ICV_1mm.nii
+dataset_info:
+  ABCD:
+    local_path: /project/data/ABCD/
+    participants_tsv: /project/data/ABCD/test_participants_ABCD.tsv
+    score_fields_eval:
+      - age
+      - cbcl_scr_syn_totprob_r
+      - cbcl_scr_syn_anxdep_r
+      - cbcl_scr_syn_withdep_r
+      - cbcl_scr_syn_somatic_r
+      - cbcl_scr_syn_social_r
+      - cbcl_scr_syn_thought_r
+      - cbcl_scr_syn_attention_r
+      - cbcl_scr_syn_rulebreak_r
+      - cbcl_scr_syn_aggressive_r
+      - cbcl_scr_syn_internal_r
+      - cbcl_scr_syn_external_r
+      - cbcl_scr_dsm5_depress_r
+      - cbcl_scr_dsm5_anxdisord_r
+      - cbcl_scr_dsm5_somaticpr_r
+      - cbcl_scr_dsm5_adhd_r
+      - cbcl_scr_dsm5_opposit_r
+      - cbcl_scr_dsm5_conduct_r
+    diagnostic_fields_eval:
+    pvalue_corrected_alpha: 0.05/170*17
+    likelihood_paths:
+      - /project/data/ABCD/training_output/get_likelihood_ABCD_0/
+      - /project/data/ABCD/training_output/get_likelihood_ABCD_1/
+      - /project/data/ABCD/training_output/get_likelihood_ABCD_2/
+      - /project/data/ABCD/training_output/get_likelihood_ABCD_3/
+      - /project/data/ABCD/training_output/get_likelihood_ABCD_4/
+      - /project/data/ABCD/training_output/get_likelihood_ABCD_5/
+      - /project/data/ABCD/training_output/get_likelihood_ABCD_6/
+      - /project/data/ABCD/training_output/get_likelihood_ABCD_7/
+      - /project/data/ABCD/training_output/get_likelihood_ABCD_8/
+  ADHD200:
+    local_path: /project/data/ADHD200/
+    participants_tsv: /project/data/ADHD200/participants_ADHD200.tsv
+    score_fields_eval:
+      - age
+      - ADHD_INDEX
+      - INATTENTIVE
+      - HYPER_IMPULSIVE
+    diagnostic_fields_eval:
+      - DX
+    pvalue_corrected_alpha: 0.05/170*4
+    likelihood_paths:
+      - /project/data/ADHD200/training_output/get_likelihood_ADHD200_0/
+      - /project/data/ADHD200/training_output/get_likelihood_ADHD200_1/
+      - /project/data/ADHD200/training_output/get_likelihood_ADHD200_2/
+      - /project/data/ADHD200/training_output/get_likelihood_ADHD200_3/
+      - /project/data/ADHD200/training_output/get_likelihood_ADHD200_4/
+      - /project/data/ADHD200/training_output/get_likelihood_ADHD200_5/
+      - /project/data/ADHD200/training_output/get_likelihood_ADHD200_6/
+      - /project/data/ADHD200/training_output/get_likelihood_ADHD200_7/
+      - /project/data/ADHD200/training_output/get_likelihood_ADHD200_8/
+  ABIDE2:
+    local_path: /project/data/ABIDE2/
+    participants_tsv: /project/data/ABIDE2/participants_ABIDE2.tsv
+    score_fields_eval:
+      - age
+    diagnostic_fields_eval:
+      - DX
+    pvalue_corrected_alpha: 0.05/170*1
+    likelihood_paths:
+      - /project/data/ABIDE2/training_output/get_likelihood_ABIDE2_0/
+      - /project/data/ABIDE2/training_output/get_likelihood_ABIDE2_1/
+      - /project/data/ABIDE2/training_output/get_likelihood_ABIDE2_2/
+      - /project/data/ABIDE2/training_output/get_likelihood_ABIDE2_3/
+      - /project/data/ABIDE2/training_output/get_likelihood_ABIDE2_4/
+      - /project/data/ABIDE2/training_output/get_likelihood_ABIDE2_5/
+      - /project/data/ABIDE2/training_output/get_likelihood_ABIDE2_6/
+      - /project/data/ABIDE2/training_output/get_likelihood_ABIDE2_7/
+      - /project/data/ABIDE2/training_output/get_likelihood_ABIDE2_8/
+  BHRCS:
+    local_path: /project/data/INPD/
+    participants_tsv: /project/data/INPD/participants_INPD_all.tsv
+    score_fields_eval:
+      - age
+      - cl_tot
+      - cl_anxdep
+      - cl_withdep
+      - cl_somatic
+      - cl_social
+      - cl_thought
+      - cl_attent
+      - cl_rulebk
+      - cl_aggress
+      - cl_other
+      - cl_int
+      - cl_ext
+      - cl_p_fl
+      - cl_int_fl
+      - cl_ext_fl
+    diagnostic_fields_eval:
+      - dcanyso
+    pvalue_corrected_alpha: 0.05/170*16
+    likelihood_paths:
+      - /project/data/INPD/training_output/get_likelihood_BHRCS_0/
+      - /project/data/INPD/training_output/get_likelihood_BHRCS_1/
+      - /project/data/INPD/training_output/get_likelihood_BHRCS_2/
+      - /project/data/INPD/training_output/get_likelihood_BHRCS_3/
+      - /project/data/INPD/training_output/get_likelihood_BHRCS_4/
+      - /project/data/INPD/training_output/get_likelihood_BHRCS_5/
+      - /project/data/INPD/training_output/get_likelihood_BHRCS_6/
+      - /project/data/INPD/training_output/get_likelihood_BHRCS_7/
+      - /project/data/INPD/training_output/get_likelihood_BHRCS_8/
