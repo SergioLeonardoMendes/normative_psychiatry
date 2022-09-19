@@ -62,7 +62,6 @@ runai/preprocessing/submit_ADHD200_spm12_part2.sh
 #### 1.6. ABIDE2 preprocessing jobs:
 ```bash
 runai/preprocessing/submit_ABIDE2_spm12_part1.sh 0
-runai/preprocessing/submit_ABIDE2_spm12_part1.sh 1
 
 runai/preprocessing/submit_ABIDE2_spm12_part2.sh
 ```
