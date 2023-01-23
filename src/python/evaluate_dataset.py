@@ -21,7 +21,8 @@ def evaluate_rois_likelihoods(args, df, fields_eval, scores=True):
     dataset_prefix = 'args.dataset_info.' + dataset_name
     common_prefix = 'args.common_files'
     likelihood_paths = eval(dataset_prefix + '.likelihood_paths')
-    pvalue_corrected_alpha = eval(eval(dataset_prefix + '.pvalue_corrected_alpha'))
+    pvalue_comparisons_scores = eval(eval(dataset_prefix + '.pvalue_comparisons_scores'))
+    pvalue_comparisons_diag = eval(eval(dataset_prefix + '.pvalue_comparisons_diag'))
     nii_map_file = eval(common_prefix + '.nii_map_file')
     nii_atlas_file = eval(common_prefix + '.nii_atlas_file')
     nii_icv_mask = eval(common_prefix + '.nii_icv_mask')
@@ -72,11 +73,12 @@ def evaluate_rois_likelihoods(args, df, fields_eval, scores=True):
     # icv_mean_log_probs = log_all_subjects_probs_mean[:, icv_indexes_tokens].mean(axis=1)
 
     # test each region (atlas_id) of brain for correlation
-    print(f"\n       p-value corrected alpha: {eval(dataset_prefix + '.pvalue_corrected_alpha')}")
+    print(f"\n       p-value number of comparisons (scores): {eval(dataset_prefix + '.pvalue_comparisons_scores')}")
+    print(f"       p-value  number of comparisons (diagnostics): {eval(dataset_prefix + '.pvalue_comparisons_diag')}")
     if scores:
-        print("\n       field,atlas_id,atlas_descr,r-pearson,p-value")
+        print("\n       field,atlas_id,atlas_descr,r-pearson,pvalue,pvalue_bonfer ")
     else:
-        print("\n       field,atlas_id,atlas_descr,auc_roc,p-value")
+        print("\n       field,atlas_id,atlas_descr,auc_roc,pvalue,pvalue_bonfer")
 
     for atlas_id in set(atlas_idx_np.flatten()):
         # does not evaluate background due to memory overflow
@@ -96,13 +98,17 @@ def evaluate_rois_likelihoods(args, df, fields_eval, scores=True):
                 atlas_descr = df_atlas[df_atlas['id'] == atlas_id]['name'].values[0]
                 if scores:
                     r, pval = stats.pearsonr(x, y)
+                    pval_bonfer = pval * pvalue_comparisons_scores
+                    pvalue_corrected_alpha = 0.05 / pvalue_comparisons_scores
                     if pval < pvalue_corrected_alpha:  # p-value corretion for <0.05
-                        print(f"       {field},{atlas_id},{atlas_descr},{r},{pval:.2e}")
+                        print(f"       {field},{atlas_id},{atlas_descr},{r},{pval:.1e},{pval_bonfer:.1e}")
                 else:
                     auc = roc_auc_score(y, 1 - x)  # use 1-x, as lower probabilities represent higher chances of autism
                     auc_permut, pval_permut = calc_pval_auc_permutation(y, 1 - x, auc, nsamples=1000)
+                    pval_bonfer = pval_permut * pvalue_comparisons_diag
+                    pvalue_corrected_alpha = 0.05 / pvalue_comparisons_diag
                     if pval_permut < pvalue_corrected_alpha:  # p-value corretion for <0.05
-                        print(f"       {field},{atlas_id},{atlas_descr},{auc},{pval_permut:.2e}")
+                        print(f"       {field},{atlas_id},{atlas_descr},{auc},{pval_permut:.1e},{pval_bonfer:.1e}")
 
 def main(args):
     # print(args)
@@ -145,7 +151,8 @@ def main(args):
         for field in score_fields_eval:
             y = df_test_scores[field]
             r, pval = stats.spearmanr(x, y)
-            print(f'{field: >30} | spearman-r: {r:+0.2f}, pval: {pval:0.4e}')
+            pval_bonf = pval * len(score_fields_eval)
+            print(f'{field: >30} | spearman-r: {r:+0.2f}, pval: {pval:0.1e}, pval_bonfer: {pval_bonf:0.1e}')
         evaluate_rois_likelihoods(args, df_test_scores, score_fields_eval, scores=True)
     if diagnostic_fields_eval is not None:
         df_test_diagnostics = df_test[diagnostic_fields_eval].copy()
@@ -158,7 +165,8 @@ def main(args):
             y = df_test_diagnostics[field]
             auc = roc_auc_score(y, x.abs())
             auc_permut, pval_permut = calc_pval_auc_permutation(y, x.abs(), auc, nsamples=1000)
-            print(f'{field: >30} |        auc: {auc:+0.2f}, pval: {pval_permut:0.4f}')
+            pval_bonf = pval_permut * len(diagnostic_fields_eval)
+            print(f'{field: >30} |        auc: {auc:+0.2f}, pval: {pval_permut:0.1e}, pval_bonfer: {pval_bonf:0.1e}')
         evaluate_rois_likelihoods(args, df_test_diagnostics, diagnostic_fields_eval, scores=False)
 
 if __name__ == "__main__":

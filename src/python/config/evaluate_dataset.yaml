@@ -30,7 +30,8 @@ dataset_info:
       - cbcl_scr_dsm5_opposit_r
       - cbcl_scr_dsm5_conduct_r
     diagnostic_fields_eval:
-    pvalue_corrected_alpha: 0.05/(170*17)
+    pvalue_comparisons_scores: (170*17)
+    pvalue_comparisons_diag: (170*1)
     likelihood_paths:
       - /project/data/ABCD/training_output/get_likelihood_ABCD_0/
       - /project/data/ABCD/training_output/get_likelihood_ABCD_1/
@@ -51,7 +52,8 @@ dataset_info:
       - HYPER_IMPULSIVE
     diagnostic_fields_eval:
       - DX
-    pvalue_corrected_alpha: 0.05/(170*4)
+    pvalue_comparisons_scores: (170*4)
+    pvalue_comparisons_diag: (170*1)
     likelihood_paths:
       - /project/data/ADHD200/training_output/get_likelihood_ADHD200_0/
       - /project/data/ADHD200/training_output/get_likelihood_ADHD200_1/
@@ -69,7 +71,8 @@ dataset_info:
       - age
     diagnostic_fields_eval:
       - DX
-    pvalue_corrected_alpha: 0.05/(170*1)
+    pvalue_comparisons_scores: (170*1)
+    pvalue_comparisons_diag: (170*1)
     likelihood_paths:
       - /project/data/ABIDE2/training_output/get_likelihood_ABIDE2_0/
       - /project/data/ABIDE2/training_output/get_likelihood_ABIDE2_1/
@@ -102,7 +105,8 @@ dataset_info:
       - cl_ext_fl
     diagnostic_fields_eval:
       - dcanyso
-    pvalue_corrected_alpha: 0.05/(170*16)
+    pvalue_comparisons_scores: (170*16)
+    pvalue_comparisons_diag: (170*1)
     likelihood_paths:
       - /project/data/INPD/training_output/get_likelihood_BHRCS_0/
       - /project/data/INPD/training_output/get_likelihood_BHRCS_1/

@@ -7,8 +7,10 @@ venv/
 src/python/__pycache__/
 src/python/layers/__pycache__/
 src/python/models/__pycache__/
+src/.Trash-1000/
+src/python/eda/.ipynb_checkpoints/
 
 # unwanted files #
 ##################
-#.gitignore
+.gitignore
 src/python/rascunho.py
