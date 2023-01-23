@@ -73,11 +73,11 @@ def evaluate_rois_likelihoods(args, df, fields_eval, scores=True):
     # icv_mean_log_probs = log_all_subjects_probs_mean[:, icv_indexes_tokens].mean(axis=1)
 
     # test each region (atlas_id) of brain for correlation
-    print(f"\n       p-value number of comparisons (scores): {eval(dataset_prefix + '.pvalue_comparisons_scores')}")
-    print(f"       p-value  number of comparisons (diagnostics): {eval(dataset_prefix + '.pvalue_comparisons_diag')}")
     if scores:
+        print(f"\n       p-value number of comparisons for scores: {eval(dataset_prefix + '.pvalue_comparisons_scores')}")
         print("\n       field,atlas_id,atlas_descr,r-pearson,pvalue,pvalue_bonfer ")
     else:
+        print(f"\n       p-value  number of comparisons for diagnostics: {eval(dataset_prefix + '.pvalue_comparisons_diag')}")
         print("\n       field,atlas_id,atlas_descr,auc_roc,pvalue,pvalue_bonfer")
 
     for atlas_id in set(atlas_idx_np.flatten()):
