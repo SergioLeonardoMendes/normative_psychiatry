@@ -136,3 +136,25 @@ runai/evaluation/abide2_submit_get_likelihood_6.sh
 runai/evaluation/abide2_submit_get_likelihood_7.sh
 runai/evaluation/abide2_submit_get_likelihood_8.sh
 ```
+
+### 4. Evaluate datasets:
+
+#### 4.1. Evaluate ABCD:
+```bash
+python src/python/evaluate_dataset.py dataset_name=ABCD
+```
+
+#### 4.2. Evaluate BHRCS
+```bash
+python src/python/evaluate_dataset.py dataset_name=BHRCS
+```
+
+#### 4.3. Evaluate ABIDE-II
+```bash
+python src/python/evaluate_dataset.py dataset_name=ABIDE2
+```
+
+#### 4.4. Evaluate ADHD-200
+```bash
+python src/python/evaluate_dataset.py dataset_name=ADHD200
+```
