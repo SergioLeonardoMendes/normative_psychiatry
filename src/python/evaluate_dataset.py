@@ -59,17 +59,17 @@ def evaluate_rois_likelihoods(args, df, fields_eval, scores=True):
             all_subjects_probs_sum += all_subjects_probs
     all_subjects_probs_mean = all_subjects_probs_sum / (model_num + 1)
 
-    ### calculate mean intracranial volume likelihoods
-    # create log_all_subjects_probs_mean variable
-    log_all_subjects_probs_mean = np.zeros(shape=all_subjects_probs_mean.shape)
-    for i in range(len(all_subjects_probs_mean)):
-        log_all_subjects_probs_mean[i, :] = np.log(all_subjects_probs_mean[i, :])
-        # get 3d indices for all intra cranial volume mask
-    icv_indexes_3d = (mask_icv_np * map_idx_np).nonzero()
-    # get corresponding indexes for serialized tokens
-    icv_indexes_tokens = map_idx_np[icv_indexes_3d]
-    # get mean probability of all intra cranial volume tokens
-    icv_mean_log_probs = log_all_subjects_probs_mean[:, icv_indexes_tokens].mean(axis=1)
+    # ### calculate mean intracranial volume likelihoods
+    # # create log_all_subjects_probs_mean variable
+    # log_all_subjects_probs_mean = np.zeros(shape=all_subjects_probs_mean.shape)
+    # for i in range(len(all_subjects_probs_mean)):
+    #     log_all_subjects_probs_mean[i, :] = np.log(all_subjects_probs_mean[i, :])
+    #     # get 3d indices for all intra cranial volume mask
+    # icv_indexes_3d = (mask_icv_np * map_idx_np).nonzero()
+    # # get corresponding indexes for serialized tokens
+    # icv_indexes_tokens = map_idx_np[icv_indexes_3d]
+    # # get mean probability of all intra cranial volume tokens
+    # icv_mean_log_probs = log_all_subjects_probs_mean[:, icv_indexes_tokens].mean(axis=1)
 
     # test each region (atlas_id) of brain for correlation
     print(f"\n       p-value corrected alpha: {eval(dataset_prefix + '.pvalue_corrected_alpha')}")
