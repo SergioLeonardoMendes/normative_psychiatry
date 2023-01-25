@@ -1,0 +1,82 @@
+
+Evaluating dataset: BHRCS
+
+-- Total Likelihood Metrics (Transformers emsemble):
+
+   -- Evaluating score keys. Sample size N=737.
+                           age | spearman-r: -0.07, pval: 4.6e-02, pval_bonfer: 7.4e-01
+                        cl_tot | spearman-r: +0.05, pval: 1.7e-01, pval_bonfer: 2.7e+00
+                     cl_anxdep | spearman-r: +0.04, pval: 2.3e-01, pval_bonfer: 3.7e+00
+                    cl_withdep | spearman-r: +0.04, pval: 2.4e-01, pval_bonfer: 3.8e+00
+                    cl_somatic | spearman-r: +0.09, pval: 2.0e-02, pval_bonfer: 3.3e-01
+                     cl_social | spearman-r: +0.05, pval: 1.6e-01, pval_bonfer: 2.6e+00
+                    cl_thought | spearman-r: -0.02, pval: 6.7e-01, pval_bonfer: 1.1e+01
+                     cl_attent | spearman-r: +0.01, pval: 7.7e-01, pval_bonfer: 1.2e+01
+                     cl_rulebk | spearman-r: +0.05, pval: 1.4e-01, pval_bonfer: 2.2e+00
+                    cl_aggress | spearman-r: +0.07, pval: 6.9e-02, pval_bonfer: 1.1e+00
+                      cl_other | spearman-r: +0.01, pval: 8.5e-01, pval_bonfer: 1.4e+01
+                        cl_int | spearman-r: +0.07, pval: 6.6e-02, pval_bonfer: 1.1e+00
+                        cl_ext | spearman-r: +0.07, pval: 7.3e-02, pval_bonfer: 1.2e+00
+                       cl_p_fl | spearman-r: +0.06, pval: 9.2e-02, pval_bonfer: 1.5e+00
+                     cl_int_fl | spearman-r: +0.04, pval: 2.5e-01, pval_bonfer: 4.0e+00
+                     cl_ext_fl | spearman-r: +0.04, pval: 2.7e-01, pval_bonfer: 4.3e+00
+
+       -- Reading data to produce ensemble - model 0
+       -- Reading data to produce ensemble - model 1
+       -- Reading data to produce ensemble - model 2
+       -- Reading data to produce ensemble - model 3
+       -- Reading data to produce ensemble - model 4
+       -- Reading data to produce ensemble - model 5
+       -- Reading data to produce ensemble - model 6
+       -- Reading data to produce ensemble - model 7
+       -- Reading data to produce ensemble - model 8
+
+       p-value number of comparisons for scores: (170*16)
+
+       field,atlas_id,atlas_descr,r-pearson,pvalue,pvalue_bonfer 
+       cl_p_fl,73,Paracentral_Lobule_L,0.17018841566379117,3.4e-06,9.2e-03
+       age,80,Pallidum_R,-0.19568191127133913,8.5e-08,2.3e-04
+       cl_somatic,101,Cerebellum_4_5_L,0.15771216614977815,1.7e-05,4.6e-02
+       age,102,Cerebellum_4_5_R,-0.18450509798386064,4.6e-07,1.2e-03
+       age,104,Cerebellum_6_R,-0.17112911423747398,3.0e-06,8.1e-03
+       age,113,Vermis_1_2,-0.21170542483901594,6.5e-09,1.8e-05
+       cl_tot,114,Vermis_3,-0.1734243298023696,2.2e-06,5.9e-03
+       cl_anxdep,114,Vermis_3,-0.16020512891074304,1.2e-05,3.4e-02
+       cl_withdep,114,Vermis_3,-0.16046023521788957,1.2e-05,3.3e-02
+       cl_social,114,Vermis_3,-0.18766742765432465,2.9e-07,7.8e-04
+       cl_int,114,Vermis_3,-0.18212778634850693,6.4e-07,1.8e-03
+       cl_p_fl,114,Vermis_3,-0.19944136355052608,4.8e-08,1.3e-04
+       cl_somatic,116,Vermis_6,0.17080987482468585,3.1e-06,8.5e-03
+       cl_tot,129,Thal_VPL_L,0.17972961720727415,9.1e-07,2.5e-03
+       cl_somatic,129,Thal_VPL_L,0.16898184892735313,4.0e-06,1.1e-02
+       cl_social,129,Thal_VPL_L,0.1625232184490927,9.2e-06,2.5e-02
+       cl_thought,129,Thal_VPL_L,0.17910507177991186,9.9e-07,2.7e-03
+       cl_other,129,Thal_VPL_L,0.16546569771622546,6.3e-06,1.7e-02
+       cl_int,129,Thal_VPL_L,0.17072500522654213,3.1e-06,8.6e-03
+       cl_p_fl,129,Thal_VPL_L,0.17214382299705816,2.6e-06,7.1e-03
+       age,131,Thal_IL_L,-0.1946309476866342,1.0e-07,2.7e-04
+       age,133,Thal_Re_L,-0.17137703032049448,2.9e-06,7.8e-03
+       cl_int,159,VTA_L,0.16424487507623822,7.4e-06,2.0e-02
+       age,160,VTA_R,-0.1631759770226146,8.5e-06,2.3e-02
+       cl_tot,165,Red_N_L,0.1620678335689753,9.8e-06,2.7e-02
+       cl_somatic,165,Red_N_L,0.16077904532869808,1.2e-05,3.1e-02
+       cl_other,165,Red_N_L,0.16003063703315767,1.3e-05,3.5e-02
+       cl_int,165,Red_N_L,0.16871234991769482,4.1e-06,1.1e-02
+       cl_p_fl,165,Red_N_L,0.17372393873446207,2.1e-06,5.7e-03
+
+   -- Evaluating diagnostic keys. Sample size N=737.
+                       dcanyso |        auc: +0.56, pval: 3.9e-01, pval_bonfer: 3.9e-01
+
+       -- Reading data to produce ensemble - model 0
+       -- Reading data to produce ensemble - model 1
+       -- Reading data to produce ensemble - model 2
+       -- Reading data to produce ensemble - model 3
+       -- Reading data to produce ensemble - model 4
+       -- Reading data to produce ensemble - model 5
+       -- Reading data to produce ensemble - model 6
+       -- Reading data to produce ensemble - model 7
+       -- Reading data to produce ensemble - model 8
+
+       p-value  number of comparisons for diagnostics: (170*1)
+
+       field,atlas_id,atlas_descr,auc_roc,pvalue,pvalue_bonfer

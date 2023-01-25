@@ -1,0 +1,86 @@
+
+Evaluating dataset: ADHD200
+
+-- Total Likelihood Metrics (Transformers emsemble):
+
+   -- Evaluating score keys. Sample size N=557.
+                           age | spearman-r: -0.19, pval: 4.3e-06, pval_bonfer: 1.7e-05
+                    ADHD_INDEX | spearman-r: +0.02, pval: 7.2e-01, pval_bonfer: 2.9e+00
+                   INATTENTIVE | spearman-r: +0.03, pval: 4.7e-01, pval_bonfer: 1.9e+00
+               HYPER_IMPULSIVE | spearman-r: +0.01, pval: 8.6e-01, pval_bonfer: 3.4e+00
+
+       -- Reading data to produce ensemble - model 0
+       -- Reading data to produce ensemble - model 1
+       -- Reading data to produce ensemble - model 2
+       -- Reading data to produce ensemble - model 3
+       -- Reading data to produce ensemble - model 4
+       -- Reading data to produce ensemble - model 5
+       -- Reading data to produce ensemble - model 6
+       -- Reading data to produce ensemble - model 7
+       -- Reading data to produce ensemble - model 8
+
+       p-value number of comparisons for scores: (170*4)
+
+       field,atlas_id,atlas_descr,r-pearson,pvalue,pvalue_bonfer 
+       INATTENTIVE,3,Frontal_Sup_2_L,-0.1820248308897487,1.5e-05,1.0e-02
+       HYPER_IMPULSIVE,3,Frontal_Sup_2_L,-0.20332727473844822,1.3e-06,8.9e-04
+       INATTENTIVE,4,Frontal_Sup_2_R,-0.22588458770088626,7.1e-08,4.8e-05
+       HYPER_IMPULSIVE,4,Frontal_Sup_2_R,-0.266160653201166,1.7e-10,1.2e-07
+       INATTENTIVE,19,Frontal_Sup_Medial_L,-0.19210859195576602,5.0e-06,3.4e-03
+       HYPER_IMPULSIVE,19,Frontal_Sup_Medial_L,-0.22883927397917875,4.7e-08,3.2e-05
+       INATTENTIVE,20,Frontal_Sup_Medial_R,-0.2311487698740704,3.4e-08,2.3e-05
+       HYPER_IMPULSIVE,20,Frontal_Sup_Medial_R,-0.2659075649162669,1.8e-10,1.2e-07
+       HYPER_IMPULSIVE,21,Frontal_Med_Orb_L,-0.1778348864473373,2.4e-05,1.7e-02
+       HYPER_IMPULSIVE,22,Frontal_Med_Orb_R,-0.19998724726942446,2.0e-06,1.3e-03
+       HYPER_IMPULSIVE,23,Rectus_L,-0.18452387991496075,1.2e-05,8.0e-03
+       INATTENTIVE,28,OFCant_R,-0.1755232900764527,3.1e-05,2.1e-02
+       HYPER_IMPULSIVE,28,OFCant_R,-0.20359107201540633,1.3e-06,8.6e-04
+       HYPER_IMPULSIVE,46,Amygdala_R,-0.17044888768226907,5.3e-05,3.6e-02
+       HYPER_IMPULSIVE,95,Cerebellum_Crus1_L,-0.17748198267414467,2.5e-05,1.7e-02
+       INATTENTIVE,97,Cerebellum_Crus2_L,-0.2347489583428904,2.1e-08,1.4e-05
+       HYPER_IMPULSIVE,97,Cerebellum_Crus2_L,-0.26254860470628616,3.1e-10,2.1e-07
+       HYPER_IMPULSIVE,98,Cerebellum_Crus2_R,-0.18666757383997426,9.2e-06,6.3e-03
+       HYPER_IMPULSIVE,99,Cerebellum_3_L,-0.1737030956490514,3.8e-05,2.6e-02
+       HYPER_IMPULSIVE,103,Cerebellum_6_L,-0.17732416589104102,2.6e-05,1.7e-02
+       INATTENTIVE,105,Cerebellum_7b_L,-0.2192580639204916,1.7e-07,1.2e-04
+       HYPER_IMPULSIVE,105,Cerebellum_7b_L,-0.24837451308324845,2.8e-09,1.9e-06
+       HYPER_IMPULSIVE,108,Cerebellum_8_R,-0.19059484643959937,5.9e-06,4.0e-03
+       HYPER_IMPULSIVE,126,Thal_VA_R,0.18050117044098338,1.8e-05,1.2e-02
+       age,143,Thal_PuI_L,-0.1704234696099299,5.3e-05,3.6e-02
+       HYPER_IMPULSIVE,147,Thal_PuA_L,0.1901132445736236,6.2e-06,4.2e-03
+       HYPER_IMPULSIVE,154,ACC_pre_R,-0.18193254482073556,1.6e-05,1.1e-02
+       INATTENTIVE,156,ACC_sup_R,-0.17067440080910826,5.1e-05,3.5e-02
+       HYPER_IMPULSIVE,156,ACC_sup_R,-0.1756241533496395,3.1e-05,2.1e-02
+       ADHD_INDEX,162,SN_pc_R,-0.17020947687630675,5.4e-05,3.7e-02
+       INATTENTIVE,162,SN_pc_R,-0.22771339602701318,5.5e-08,3.8e-05
+       HYPER_IMPULSIVE,162,SN_pc_R,-0.24819313264949802,2.9e-09,2.0e-06
+
+   -- Evaluating diagnostic keys. Sample size N=922.
+                            DX |        auc: +0.54, pval: 2.5e-02, pval_bonfer: 2.5e-02
+
+       -- Reading data to produce ensemble - model 0
+       -- Reading data to produce ensemble - model 1
+       -- Reading data to produce ensemble - model 2
+       -- Reading data to produce ensemble - model 3
+       -- Reading data to produce ensemble - model 4
+       -- Reading data to produce ensemble - model 5
+       -- Reading data to produce ensemble - model 6
+       -- Reading data to produce ensemble - model 7
+       -- Reading data to produce ensemble - model 8
+
+       p-value  number of comparisons for diagnostics: (170*1)
+
+       field,atlas_id,atlas_descr,auc_roc,pvalue,pvalue_bonfer
+       DX,45,Amygdala_L,0.5806350858927641,0.0e+00,0.0e+00
+       DX,62,Postcentral_R,0.5623906199648001,0.0e+00,0.0e+00
+       DX,72,Precuneus_R,0.5624600282590912,0.0e+00,0.0e+00
+       DX,99,Cerebellum_3_L,0.6229741454103767,0.0e+00,0.0e+00
+       DX,113,Vermis_1_2,0.5815572246597753,0.0e+00,0.0e+00
+       DX,114,Vermis_3,0.596638655462185,0.0e+00,0.0e+00
+       DX,115,Vermis_4_5,0.5836989663121885,0.0e+00,0.0e+00
+       DX,118,Vermis_8,0.5777794303562134,0.0e+00,0.0e+00
+       DX,140,Thal_LGN_R,0.5900646984457499,0.0e+00,0.0e+00
+       DX,141,Thal_MGN_L,0.58429389454897,0.0e+00,0.0e+00
+       DX,149,Thal_PuL_L,0.55619345083166,0.0e+00,0.0e+00
+       DX,169,Raphe_D,0.5745816910835131,0.0e+00,0.0e+00
+       DX,170,Raphe_M,0.6141097146823331,0.0e+00,0.0e+00

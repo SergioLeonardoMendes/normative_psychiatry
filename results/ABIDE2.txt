@@ -1,0 +1,144 @@
+
+Evaluating dataset: ABIDE2
+
+-- Total Likelihood Metrics (Transformers emsemble):
+
+   -- Evaluating score keys. Sample size N=580.
+                           age | spearman-r: -0.33, pval: 1.2e-16, pval_bonfer: 1.2e-16
+
+       -- Reading data to produce ensemble - model 0
+       -- Reading data to produce ensemble - model 1
+       -- Reading data to produce ensemble - model 2
+       -- Reading data to produce ensemble - model 3
+       -- Reading data to produce ensemble - model 4
+       -- Reading data to produce ensemble - model 5
+       -- Reading data to produce ensemble - model 6
+       -- Reading data to produce ensemble - model 7
+       -- Reading data to produce ensemble - model 8
+
+       p-value number of comparisons for scores: (170*1)
+
+       field,atlas_id,atlas_descr,r-pearson,pvalue,pvalue_bonfer 
+       age,1,Precentral_L,-0.1948080825185343,2.3e-06,3.9e-04
+       age,2,Precentral_R,-0.2706263055360069,3.4e-11,5.8e-09
+       age,4,Frontal_Sup_2_R,-0.23874661459852498,5.8e-09,9.9e-07
+       age,6,Frontal_Mid_2_R,-0.15004521874431626,2.9e-04,4.9e-02
+       age,8,Frontal_Inf_Oper_R,-0.22444868142615532,4.7e-08,7.9e-06
+       age,13,Rolandic_Oper_L,-0.21711492487189077,1.3e-07,2.2e-05
+       age,14,Rolandic_Oper_R,-0.2346953082978535,1.1e-08,1.8e-06
+       age,15,Supp_Motor_Area_L,-0.18540079328786735,7.0e-06,1.2e-03
+       age,16,Supp_Motor_Area_R,0.21230437578679293,2.5e-07,4.2e-05
+       age,19,Frontal_Sup_Medial_L,-0.17175335175619333,3.2e-05,5.4e-03
+       age,27,OFCant_L,-0.2430542180154611,3.0e-09,5.1e-07
+       age,28,OFCant_R,-0.3090506022455901,2.7e-14,4.5e-12
+       age,31,OFClat_L,-0.19916397508476383,1.3e-06,2.3e-04
+       age,32,OFClat_R,-0.1660058565890046,5.9e-05,1.0e-02
+       age,41,Hippocampus_L,-0.22660403248503422,3.4e-08,5.8e-06
+       age,49,Cuneus_L,-0.1584651179761888,1.3e-04,2.2e-02
+       age,50,Cuneus_R,-0.15114291684529318,2.6e-04,4.4e-02
+       age,69,Angular_L,0.21321757726736254,2.2e-07,3.7e-05
+       age,71,Precuneus_L,-0.1776924408255359,1.7e-05,2.8e-03
+       age,73,Paracentral_Lobule_L,-0.245804085848893,2.0e-09,3.4e-07
+       age,74,Paracentral_Lobule_R,-0.15390582150594992,2.0e-04,3.4e-02
+       age,75,Caudate_L,-0.2939158367287222,5.1e-13,8.6e-11
+       age,76,Caudate_R,-0.20674947946302055,5.1e-07,8.7e-05
+       age,79,Pallidum_L,0.22506061433676883,4.3e-08,7.3e-06
+       age,84,Heschl_R,-0.21264821070116974,2.3e-07,4.0e-05
+       age,85,Temporal_Sup_L,-0.16554905010445883,6.2e-05,1.0e-02
+       age,86,Temporal_Sup_R,-0.1805226740089165,1.2e-05,2.1e-03
+       age,87,Temporal_Pole_Sup_L,-0.18974050202069032,4.2e-06,7.1e-04
+       age,88,Temporal_Pole_Sup_R,-0.22081514856016432,7.7e-08,1.3e-05
+       age,91,Temporal_Pole_Mid_L,-0.18640421086445555,6.2e-06,1.1e-03
+       age,92,Temporal_Pole_Mid_R,-0.33753659575767103,6.4e-17,1.1e-14
+       age,94,Temporal_Inf_R,-0.15862512045102156,1.2e-04,2.1e-02
+       age,95,Cerebellum_Crus1_L,-0.27630155812893403,1.3e-11,2.2e-09
+       age,96,Cerebellum_Crus1_R,-0.3694392937859429,3.4e-20,5.8e-18
+       age,97,Cerebellum_Crus2_L,-0.2528405044335368,6.5e-10,1.1e-07
+       age,98,Cerebellum_Crus2_R,-0.33759326422403224,6.3e-17,1.1e-14
+       age,99,Cerebellum_3_L,-0.3239775886922028,1.2e-15,2.1e-13
+       age,102,Cerebellum_4_5_R,-0.3009351358315438,1.3e-13,2.2e-11
+       age,103,Cerebellum_6_L,-0.18635727973737864,6.2e-06,1.1e-03
+       age,104,Cerebellum_6_R,-0.2576331783312772,3.0e-10,5.1e-08
+       age,105,Cerebellum_7b_L,-0.27263762430805377,2.4e-11,4.1e-09
+       age,106,Cerebellum_7b_R,-0.2590138441171547,2.4e-10,4.1e-08
+       age,107,Cerebellum_8_L,-0.19176128206925966,3.3e-06,5.6e-04
+       age,108,Cerebellum_8_R,-0.2085859304600728,4.0e-07,6.8e-05
+       age,109,Cerebellum_9_L,-0.28305008961002953,3.8e-12,6.5e-10
+       age,110,Cerebellum_9_R,-0.23939507392553275,5.3e-09,9.0e-07
+       age,111,Cerebellum_10_L,-0.27918932760601795,7.6e-12,1.3e-09
+       age,112,Cerebellum_10_R,-0.15677772315859473,1.5e-04,2.6e-02
+       age,113,Vermis_1_2,-0.218184789948229,1.1e-07,1.9e-05
+       age,114,Vermis_3,-0.19237335635960542,3.1e-06,5.2e-04
+       age,118,Vermis_8,-0.3648085425583102,1.1e-19,1.8e-17
+       age,119,Vermis_9,-0.18654125530167293,6.1e-06,1.0e-03
+       age,120,Vermis_10,-0.26479814246539385,9.2e-11,1.6e-08
+       age,121,Thal_AV_L,-0.23548094807715975,9.5e-09,1.6e-06
+       age,125,Thal_VA_L,0.23408660893102523,1.2e-08,2.0e-06
+       age,126,Thal_VA_R,0.27955615193885713,7.1e-12,1.2e-09
+       age,128,Thal_VL_R,0.26169743456358635,1.5e-10,2.6e-08
+       age,131,Thal_IL_L,-0.1947404149294458,2.3e-06,3.9e-04
+       age,134,Thal_Re_R,-0.1661256249630803,5.8e-05,9.9e-03
+       age,140,Thal_LGN_R,-0.18913844931804788,4.5e-06,7.7e-04
+       age,145,Thal_PuM_L,-0.35246464862017035,2.1e-18,3.5e-16
+       age,146,Thal_PuM_R,-0.2508722328064189,9.0e-10,1.5e-07
+       age,147,Thal_PuA_L,-0.27000639323310266,3.8e-11,6.5e-09
+       age,148,Thal_PuA_R,-0.21260408062448158,2.4e-07,4.0e-05
+       age,149,Thal_PuL_L,-0.2802711202987416,6.3e-12,1.1e-09
+       age,160,VTA_R,-0.35702094775688903,7.1e-19,1.2e-16
+       age,161,SN_pc_L,-0.23590056508038257,8.9e-09,1.5e-06
+       age,162,SN_pc_R,-0.33766689063264427,6.2e-17,1.1e-14
+       age,163,SN_pr_L,-0.2718348698078745,2.8e-11,4.7e-09
+       age,164,SN_pr_R,-0.2138488600922726,2.0e-07,3.4e-05
+       age,167,LC_L,-0.20058447805213556,1.1e-06,1.9e-04
+       age,168,LC_R,-0.29464055050625165,4.4e-13,7.5e-11
+
+   -- Evaluating diagnostic keys. Sample size N=580.
+                            DX |        auc: +0.60, pval: 0.0e+00, pval_bonfer: 0.0e+00
+
+       -- Reading data to produce ensemble - model 0
+       -- Reading data to produce ensemble - model 1
+       -- Reading data to produce ensemble - model 2
+       -- Reading data to produce ensemble - model 3
+       -- Reading data to produce ensemble - model 4
+       -- Reading data to produce ensemble - model 5
+       -- Reading data to produce ensemble - model 6
+       -- Reading data to produce ensemble - model 7
+       -- Reading data to produce ensemble - model 8
+
+       p-value  number of comparisons for diagnostics: (170*1)
+
+       field,atlas_id,atlas_descr,auc_roc,pvalue,pvalue_bonfer
+       DX,2,Precentral_R,0.5938797999491396,0.0e+00,0.0e+00
+       DX,8,Frontal_Inf_Oper_R,0.5821334721902662,0.0e+00,0.0e+00
+       DX,33,Insula_L,0.578500587316388,0.0e+00,0.0e+00
+       DX,37,Cingulate_Mid_L,0.6137637898255004,0.0e+00,0.0e+00
+       DX,38,Cingulate_Mid_R,0.583792489616004,0.0e+00,0.0e+00
+       DX,39,Cingulate_Post_L,0.5717797502997131,0.0e+00,0.0e+00
+       DX,41,Hippocampus_L,0.5975369040555105,0.0e+00,0.0e+00
+       DX,43,ParaHippocampal_L,0.6270117099989101,0.0e+00,0.0e+00
+       DX,44,ParaHippocampal_R,0.5764298429382773,0.0e+00,0.0e+00
+       DX,47,Calcarine_L,0.6065222393102363,0.0e+00,0.0e+00
+       DX,49,Cuneus_L,0.580958839414379,0.0e+00,0.0e+00
+       DX,50,Cuneus_R,0.5751462236161735,0.0e+00,0.0e+00
+       DX,51,Lingual_L,0.5880914033834268,0.0e+00,0.0e+00
+       DX,61,Postcentral_L,0.5996681965148525,0.0e+00,0.0e+00
+       DX,62,Postcentral_R,0.6262366945591493,0.0e+00,0.0e+00
+       DX,71,Precuneus_L,0.6273628888700518,0.0e+00,0.0e+00
+       DX,73,Paracentral_Lobule_L,0.5820123760278038,0.0e+00,0.0e+00
+       DX,74,Paracentral_Lobule_R,0.604003439131014,0.0e+00,0.0e+00
+       DX,77,Putamen_L,0.5911309170612383,0.0e+00,0.0e+00
+       DX,84,Heschl_R,0.6208963537945482,0.0e+00,0.0e+00
+       DX,85,Temporal_Sup_L,0.6162341515397377,0.0e+00,0.0e+00
+       DX,86,Temporal_Sup_R,0.60929534143063,0.0e+00,0.0e+00
+       DX,87,Temporal_Pole_Sup_L,0.605165962290655,0.0e+00,0.0e+00
+       DX,92,Temporal_Pole_Mid_R,0.5941462115065573,0.0e+00,0.0e+00
+       DX,96,Cerebellum_Crus1_R,0.5857663570641446,0.0e+00,0.0e+00
+       DX,102,Cerebellum_4_5_R,0.6067886508676541,0.0e+00,0.0e+00
+       DX,110,Cerebellum_9_R,0.5992806887949722,0.0e+00,0.0e+00
+       DX,118,Vermis_8,0.599183811865002,0.0e+00,0.0e+00
+       DX,121,Thal_AV_L,0.5864081667251965,0.0e+00,0.0e+00
+       DX,145,Thal_PuM_L,0.6030467794475594,0.0e+00,0.0e+00
+       DX,155,ACC_sup_L,0.5871952917812034,0.0e+00,0.0e+00
+       DX,156,ACC_sup_R,0.5933227576018116,0.0e+00,0.0e+00
+       DX,160,VTA_R,0.5919906998147229,0.0e+00,0.0e+00
+       DX,162,SN_pc_R,0.5697937732353261,0.0e+00,0.0e+00

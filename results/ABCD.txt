@@ -1,0 +1,81 @@
+
+Evaluating dataset: ABCD
+
+-- Total Likelihood Metrics (Transformers emsemble):
+
+   -- Evaluating score keys. Sample size N=3524.
+                           age | spearman-r: -0.01, pval: 4.8e-01, pval_bonfer: 8.7e+00
+        cbcl_scr_syn_totprob_r | spearman-r: +0.02, pval: 2.1e-01, pval_bonfer: 3.8e+00
+         cbcl_scr_syn_anxdep_r | spearman-r: +0.01, pval: 5.9e-01, pval_bonfer: 1.1e+01
+        cbcl_scr_syn_withdep_r | spearman-r: +0.02, pval: 1.9e-01, pval_bonfer: 3.4e+00
+        cbcl_scr_syn_somatic_r | spearman-r: +0.02, pval: 1.7e-01, pval_bonfer: 3.1e+00
+         cbcl_scr_syn_social_r | spearman-r: +0.06, pval: 3.7e-04, pval_bonfer: 6.6e-03
+        cbcl_scr_syn_thought_r | spearman-r: -0.05, pval: 7.2e-03, pval_bonfer: 1.3e-01
+      cbcl_scr_syn_attention_r | spearman-r: -0.03, pval: 1.3e-01, pval_bonfer: 2.3e+00
+      cbcl_scr_syn_rulebreak_r | spearman-r: +0.03, pval: 1.1e-01, pval_bonfer: 1.9e+00
+     cbcl_scr_syn_aggressive_r | spearman-r: +0.03, pval: 8.9e-02, pval_bonfer: 1.6e+00
+       cbcl_scr_syn_internal_r | spearman-r: +0.02, pval: 2.8e-01, pval_bonfer: 5.0e+00
+       cbcl_scr_syn_external_r | spearman-r: +0.03, pval: 5.6e-02, pval_bonfer: 1.0e+00
+       cbcl_scr_dsm5_depress_r | spearman-r: +0.01, pval: 4.1e-01, pval_bonfer: 7.3e+00
+     cbcl_scr_dsm5_anxdisord_r | spearman-r: +0.02, pval: 2.3e-01, pval_bonfer: 4.2e+00
+     cbcl_scr_dsm5_somaticpr_r | spearman-r: +0.02, pval: 2.3e-01, pval_bonfer: 4.1e+00
+          cbcl_scr_dsm5_adhd_r | spearman-r: -0.03, pval: 4.6e-02, pval_bonfer: 8.3e-01
+       cbcl_scr_dsm5_opposit_r | spearman-r: +0.00, pval: 8.6e-01, pval_bonfer: 1.6e+01
+       cbcl_scr_dsm5_conduct_r | spearman-r: +0.03, pval: 7.3e-02, pval_bonfer: 1.3e+00
+
+       -- Reading data to produce ensemble - model 0
+       -- Reading data to produce ensemble - model 1
+       -- Reading data to produce ensemble - model 2
+       -- Reading data to produce ensemble - model 3
+       -- Reading data to produce ensemble - model 4
+       -- Reading data to produce ensemble - model 5
+       -- Reading data to produce ensemble - model 6
+       -- Reading data to produce ensemble - model 7
+       -- Reading data to produce ensemble - model 8
+
+       p-value number of comparisons for scores: (170*17)
+
+       field,atlas_id,atlas_descr,r-pearson,pvalue,pvalue_bonfer 
+       cbcl_scr_syn_social_r,2,Precentral_R,0.073747439100239,1.2e-05,3.4e-02
+       cbcl_scr_syn_totprob_r,3,Frontal_Sup_2_L,0.07493350225321699,8.5e-06,2.4e-02
+       cbcl_scr_syn_social_r,3,Frontal_Sup_2_L,0.08383232329841224,6.2e-07,1.8e-03
+       cbcl_scr_syn_rulebreak_r,3,Frontal_Sup_2_L,0.07637863887403196,5.6e-06,1.6e-02
+       cbcl_scr_syn_external_r,3,Frontal_Sup_2_L,0.07536838792460232,7.5e-06,2.2e-02
+       cbcl_scr_dsm5_conduct_r,3,Frontal_Sup_2_L,0.07318286867062106,1.4e-05,4.0e-02
+       cbcl_scr_syn_social_r,4,Frontal_Sup_2_R,0.07979892793346363,2.1e-06,6.1e-03
+       cbcl_scr_syn_rulebreak_r,6,Frontal_Mid_2_R,0.07810870985196537,3.4e-06,1.0e-02
+       cbcl_scr_syn_rulebreak_r,10,Frontal_Inf_Tri_R,0.07350441219530447,1.3e-05,3.6e-02
+       cbcl_scr_syn_social_r,19,Frontal_Sup_Medial_L,0.07403619251048067,1.1e-05,3.1e-02
+       cbcl_scr_syn_rulebreak_r,19,Frontal_Sup_Medial_L,0.07960513566250431,2.2e-06,6.4e-03
+       cbcl_scr_syn_external_r,19,Frontal_Sup_Medial_L,0.07488042326456863,8.6e-06,2.5e-02
+       cbcl_scr_dsm5_conduct_r,19,Frontal_Sup_Medial_L,0.07841851624175893,3.2e-06,9.1e-03
+       cbcl_scr_syn_social_r,20,Frontal_Sup_Medial_R,0.0806057196895567,1.7e-06,4.8e-03
+       cbcl_scr_syn_social_r,48,Calcarine_R,0.07576832602248416,6.7e-06,1.9e-02
+       cbcl_scr_syn_social_r,49,Cuneus_L,0.08083092551134599,1.6e-06,4.5e-03
+       cbcl_scr_syn_social_r,50,Cuneus_R,0.09762742216149525,6.3e-09,1.8e-05
+       cbcl_scr_syn_totprob_r,53,Occipital_Sup_L,0.07469445552176687,9.0e-06,2.6e-02
+       cbcl_scr_syn_social_r,53,Occipital_Sup_L,0.09061893434728335,7.1e-08,2.1e-04
+       cbcl_scr_syn_social_r,54,Occipital_Sup_R,0.10146322910384079,1.6e-09,4.5e-06
+       cbcl_scr_syn_social_r,55,Occipital_Mid_L,0.07253873287483102,1.6e-05,4.7e-02
+       cbcl_scr_syn_social_r,56,Occipital_Mid_R,0.08143388801464638,1.3e-06,3.7e-03
+       cbcl_scr_syn_social_r,62,Postcentral_R,0.08535064231268387,3.9e-07,1.1e-03
+       cbcl_scr_syn_totprob_r,63,Parietal_Sup_L,0.09842519267772866,4.8e-09,1.4e-05
+       cbcl_scr_syn_social_r,63,Parietal_Sup_L,0.12285165730474572,2.5e-13,7.3e-10
+       cbcl_scr_syn_rulebreak_r,63,Parietal_Sup_L,0.08656316827917686,2.7e-07,7.7e-04
+       cbcl_scr_syn_aggressive_r,63,Parietal_Sup_L,0.08168507551861003,1.2e-06,3.5e-03
+       cbcl_scr_syn_external_r,63,Parietal_Sup_L,0.08911109285037895,1.2e-07,3.4e-04
+       cbcl_scr_dsm5_conduct_r,63,Parietal_Sup_L,0.08016815648461413,1.9e-06,5.5e-03
+       cbcl_scr_syn_totprob_r,64,Parietal_Sup_R,0.08136144017522869,1.3e-06,3.8e-03
+       cbcl_scr_syn_social_r,64,Parietal_Sup_R,0.10196495386861049,1.3e-09,3.8e-06
+       cbcl_scr_syn_rulebreak_r,64,Parietal_Sup_R,0.07974563241627443,2.1e-06,6.2e-03
+       cbcl_scr_syn_external_r,64,Parietal_Sup_R,0.07901809458846762,2.6e-06,7.7e-03
+       cbcl_scr_syn_social_r,65,Parietal_Inf_L,0.09021250342299544,8.1e-08,2.3e-04
+       cbcl_scr_syn_social_r,69,Angular_L,0.07722163865000888,4.4e-06,1.3e-02
+       cbcl_scr_syn_social_r,70,Angular_R,0.08469083444548114,4.8e-07,1.4e-03
+       cbcl_scr_syn_social_r,71,Precuneus_L,0.09587070394897167,1.2e-08,3.4e-05
+       cbcl_scr_syn_rulebreak_r,71,Precuneus_L,0.08162165879252568,1.2e-06,3.5e-03
+       cbcl_scr_syn_totprob_r,72,Precuneus_R,0.07684767062660067,4.9e-06,1.4e-02
+       cbcl_scr_syn_social_r,72,Precuneus_R,0.09548163758593493,1.4e-08,3.9e-05
+       age,126,Thal_VA_R,0.10472312939747394,4.6e-10,1.3e-06
+       age,128,Thal_VL_R,0.07512746781555751,8.0e-06,2.3e-02
+       age,165,Red_N_L,0.07685873138305639,4.9e-06,1.4e-02
