@@ -1,5 +1,6 @@
 # Normative modeling for psychiatry
 Normative modeling for psychiatry based on VQ-VAE + GPT models.
+
 DOI: [10.5281/zenodo.10694519](https://doi.org/10.5281/zenodo.10694519)
 
 ### 1. VBM preprocessing:
