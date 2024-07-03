@@ -1,5 +1,4 @@
-# Source codes of the manuscript: 
-# GPT-based normative models of brain sMRI correlate with dimensional psychopathology
+# Source codes of the manuscript: GPT-based normative models of brain sMRI correlate with dimensional psychopathology
 
 ### Please cite:
 Sergio Leonardo Mendes, Walter Hugo Lopez Pinaya, Pedro Mario Pan, Ary Gadelha, Sintia Belangero, Andrea Parolin Jackowski, Luis Augusto Rohde, Euripedes Constantino Miguel, João Ricardo Sato; GPT-based normative models of brain sMRI correlate with dimensional psychopathology. Imaging Neuroscience 2024; 2 1–15. doi: https://doi.org/10.1162/imag_a_00204
