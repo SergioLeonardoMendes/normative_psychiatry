@@ -1,7 +1,10 @@
-# Normative modeling for psychiatry
-Normative modeling for psychiatry based on VQ-VAE + GPT models.
+# Source codes for the manuscript: GPT-based normative models of brain sMRI correlate with dimensional psychopathology
 
-DOI: [10.5281/zenodo.10694519](https://doi.org/10.5281/zenodo.10694519)
+### Please cite:
+Sergio Leonardo Mendes, Walter Hugo Lopez Pinaya, Pedro Mario Pan, Ary Gadelha, Sintia Belangero, Andrea Parolin Jackowski, Luis Augusto Rohde, Euripedes Constantino Miguel, João Ricardo Sato; GPT-based normative models of brain sMRI correlate with dimensional psychopathology. Imaging Neuroscience 2024; 2 1–15. doi: https://doi.org/10.1162/imag_a_00204
+
+Trackeable sources codes registered with Zenodo:
+[10.5281/zenodo.10694519](https://doi.org/10.5281/zenodo.10694519)
 
 
 ### 1. VBM preprocessing:
